@@ -37,30 +37,16 @@
 
     <header class="sticky top-0 z-40 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5 pt-[env(safe-area-inset-top)] w-full">
         <div class="w-full max-w-screen-xl mx-auto px-4 min-h-[44px] h-auto py-2 flex items-center justify-between">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 w-full">
                 <span class="text-2xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500 pl-2 border-l border-white/10 hidden sm:block">Rodo</span>
                 <div id="ui-header-avatar-container" class="relative w-11 h-11 shrink-0"></div>
                 
-                <div class="flex flex-col mr-2">
-                    <div class="flex items-center gap-1.5">
-                        <span class="text-lg font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500 sm:hidden block">Rodo</span>
-                        <h1 id="ui-header-name" class="text-lg font-black tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-l from-white to-white/70 truncate max-w-[100px] sm:max-w-[200px]">الأسطورة</h1>
+                <div class="flex flex-col mr-2 min-w-0">
+                    <div class="flex items-center gap-1.5 min-w-0">
+                        <span class="text-lg font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500 sm:hidden block shrink-0">Rodo</span>
+                        <h1 id="ui-header-name" class="text-lg font-black tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-l from-white to-white/70 truncate max-w-[150px] sm:max-w-[300px]">الأسطورة</h1>
                     </div>
                     <p class="text-[11px] text-white/50 font-medium">الأسبوع <span id="ui-header-week" class="text-white/80">1</span></p>
-                </div>
-            </div>
-            
-            <div class="flex items-center gap-1.5 sm:gap-2">
-                <div class="flex items-center gap-1 px-3 py-2 min-h-[44px] rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 shadow-sm" title="العملات الذهبية">
-                    <i data-lucide="coins" class="w-4 h-4"></i>
-                    <span id="ui-header-coins" class="text-sm font-bold mt-0.5">0</span>
-                </div>
-                <div class="flex items-center gap-1 px-3 py-2 min-h-[44px] rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400 shadow-sm" title="أيام متتالية">
-                    <i data-lucide="flame" class="w-4 h-4" id="streak-icon"></i>
-                    <span id="ui-header-streak" class="text-sm font-bold mt-0.5">0</span>
-                </div>
-                <div class="flex items-center gap-1 px-3 py-2 min-h-[44px] rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shadow-sm">
-                    <span id="ui-header-level" class="text-sm font-bold mt-0.5">Lvl 1</span>
                 </div>
             </div>
         </div>
@@ -69,6 +55,22 @@
     <main class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 pt-6 relative z-10 overflow-x-hidden">
         
         <section id="view-dashboard" class="view-section active space-y-6">
+            
+            <!-- Premium Stats Card -->
+            <div class="glass-panel rounded-2xl p-3 grid grid-cols-3 gap-2 shadow-lg">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 py-2 px-1 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 shadow-sm text-center" title="العملات الذهبية">
+                    <i data-lucide="coins" class="w-5 h-5 sm:w-4 sm:h-4"></i>
+                    <span id="ui-header-coins" class="text-sm sm:text-base font-bold mt-0.5">0</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 py-2 px-1 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400 shadow-sm text-center" title="أيام متتالية">
+                    <i data-lucide="flame" class="w-5 h-5 sm:w-4 sm:h-4" id="streak-icon"></i>
+                    <span id="ui-header-streak" class="text-sm sm:text-base font-bold mt-0.5">0</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 py-2 px-1 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shadow-sm text-center">
+                    <span id="ui-header-level" class="text-sm sm:text-base font-bold mt-0.5">Lvl 1</span>
+                </div>
+            </div>
+
             <div class="glass-panel rounded-[2rem] p-6 relative overflow-hidden shadow-2xl">
                 <div class="absolute right-0 top-0 w-40 h-40 bg-blue-500/20 rounded-full blur-[60px] pointer-events-none"></div>
                 <h2 class="text-xl font-black mb-2 text-white">مرحباً يا بطل!</h2>
